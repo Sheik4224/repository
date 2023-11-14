@@ -49,4 +49,5 @@ def delete(request, surveyid_id):
 def del_ques(request,question_id):
      question=Question.objects.get(question_id=question_id)
      question.delete()
-     return render (request,'message.html')   
+     return render (request,'message.html')
+'ew'   
