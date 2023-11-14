@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnswerList</title>
+</head>
+<body>
+    <h1>Answer List</h1>
+    <ul>
+        {% for answer in show_answer  %}
+              
+        <li>ID: {{answer.surveyid}}</li>
+        <li>Answer: {{ answer.answer }}</li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
