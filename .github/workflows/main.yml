@@ -52,6 +52,6 @@ jobs:
       - name: Run Django application using Gunicorn
         run: |
           cd project_survey
-          #gunicorn project_survey.wsgi:application
-          python manage.py runserver
+          gunicorn project_survey.wsgi:application
+
                  
