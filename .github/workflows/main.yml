@@ -33,6 +33,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install
+          sudo apt-get install postgresql
           sudo service postgresql start
       - name: Activate virtual environment
         run: |
@@ -52,5 +53,6 @@ jobs:
       - name: Run Django application using Gunicorn
         run: |
           cd project_survey
-          gunicorn project_survey.wsgi:application
+          gunicorn project_survey.wsgi:application 127.0.0.1:8001
+
                  
