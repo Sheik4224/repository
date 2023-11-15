@@ -32,10 +32,10 @@ jobs:
          
       - name: Set up PostgreSQL
         run: |
-          sudo apt-get update
-          sudo apt-get install
-          sudo apt-get install  postgresql
-          sudo service postgresql start
+            sudo apt update
+            sudo apt install postgresql
+            sudo service postgresql start
+
         
           
       - name: Run database migrations
@@ -53,6 +53,6 @@ jobs:
       - name: Run Django application using Gunicorn
         run: |
           cd project_survey
-          gunicorn project_survey.wsgi:application
+          gunicorn project_survey.wsgi:application 
 
                  
