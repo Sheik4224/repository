@@ -33,7 +33,7 @@ jobs:
       - name: Set up PostgreSQL
         run: |
           sudo apt-get update
-          sudo apt install
+          sudo apt-get install
           sudo apt install postgresql
           sudo service postgresql start
           
