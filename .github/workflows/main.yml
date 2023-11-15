@@ -37,6 +37,10 @@ jobs:
             sudo apt install postgresql
             sudo service postgresql start
 
+      - name: Activate Virtual env
+        run: |
+          source world/bin/activate
+
         
           
       - name: Run database migrations
