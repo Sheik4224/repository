@@ -33,9 +33,9 @@ jobs:
       - name: Set up PostgreSQL
         run: |
           sudo apt-get update
-          sudo apt install
-          sudo apt-get install postgresql
-          sudo service postgresql restart
+          sudo apt-get install
+          sudo apt-get install libpq-dev postgresql
+          sudo service postgresql start
           
       
       - name: Run database migrations
