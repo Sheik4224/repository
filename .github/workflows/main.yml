@@ -54,6 +54,6 @@ jobs:
       - name: Run Django application using Gunicorn
         run: |
           cd project_survey
-          gunicorn project_survey.wsgi:application
+          gunicorn --timeout 172800 project_survey.wsgi:application
 
                  
