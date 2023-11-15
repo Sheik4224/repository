@@ -36,9 +36,7 @@ jobs:
           sudo apt-get install postgresql
           sudo service postgresql start
           
-      - name: Activate virtual environment
-        run: |
-            source world/Scripts/activate
+      
       - name: Run database migrations
         run: |
           cd project_survey
