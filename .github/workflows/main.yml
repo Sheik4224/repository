@@ -37,7 +37,7 @@ jobs:
             sudo apt install postgresql
             sudo service postgresql start
             sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '12345'"
-
+            sudo service postgres restart
       - name: Activate Virtual env
         run: |
           source world/Scripts/activate
