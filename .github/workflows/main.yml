@@ -39,7 +39,7 @@ jobs:
 
       - name: Activate Virtual env
         run: |
-          source world/bin/activate
+          source world/Scripts/activate
 
         
           
