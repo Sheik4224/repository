@@ -19,9 +19,9 @@ jobs:
           
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
       - name: Install dependencies
@@ -32,10 +32,16 @@ jobs:
          
       - name: Set up PostgreSQL
         run: |
-          sudo apt-get update
-          sudo apt-get install
-          sudo apt-get install  postgresql
-          sudo service postgresql start
+            sudo apt update
+            sudo apt-get install 
+            sudo apt install postgresql
+            sudo service postgresql start
+            sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '12345'"
+            sudo service postgres restart
+      - name: Activate Virtual env
+        run: |
+          source world/Scripts/activate
+
         
           
       - name: Run database migrations
@@ -54,5 +60,5 @@ jobs:
         run: |
           cd project_survey
           gunicorn project_survey.wsgi:application
-
+          
                  
