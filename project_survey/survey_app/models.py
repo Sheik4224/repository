@@ -10,5 +10,5 @@ class Question(models.Model):
 class Answer(models.Model):
     surveyid=ForeignKey(Question,on_delete=models.CASCADE)
     answer=models.CharField(max_length=255)
-
+'sheik'
 
