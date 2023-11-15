@@ -33,7 +33,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install
-          sudo apt-get install postgresql
+          #sudo apt-get install postgresql
           sudo service postgresql start
       - name: Activate virtual environment
         run: |
