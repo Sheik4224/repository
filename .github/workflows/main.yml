@@ -53,6 +53,6 @@ jobs:
       - name: Run Django application using Gunicorn
         run: |
           cd project_survey
-          gunicorn project_survey.wsgi:application 127.0.0.1:8000
+          gunicorn project_survey.wsgi:application
 
                  
