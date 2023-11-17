@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'project_survey.wsgi:application'
+WSGI_APPLICATION = 'project_survey.wsgi.application'
 
 
 # Database
