@@ -38,13 +38,7 @@ jobs:
           sudo service postgresql start
           sudo service postgresql status
             
-           
-      - name: Activate Virtual env
-        run: |
-          source world/Scripts/activate
-
         
-          
       - name: Run database migrations
         run: |
           cd project_survey
